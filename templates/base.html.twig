@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <!-- Bootstrap core CSS -->
-        <link href="{{ asset('../CSS/bootstrap.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('../CSS/bootstrap.css') }}" rel="stylesheet">
+</head>
+<body class="mt-5">
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
 </html>

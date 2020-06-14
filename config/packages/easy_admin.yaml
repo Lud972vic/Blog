@@ -1,0 +1,65 @@
+easy_admin:
+    # On définit le nom de l'interface d'administration
+    site_name: 'Gestion de mon blog'
+    # On définit l'affichage de l'utilisateur
+    user:
+        display_name: true
+        display_avatar: false
+    design:
+        # Ces lignes sont utiles pour CKEditor
+        form_theme:
+            - "@EasyAdmin/form/bootstrap_4.html.twig"
+            - "@FOSCKEditor/Form/ckeditor_widget.html.twig"
+        # Ces lignes définiront notre menu
+        menu:
+            - { label: 'Articles' }
+            - { entity: 'Article', label: 'Articles', icon: 'book' }
+#            - { entity: 'Categorie', label: 'Catégories', icon: 'tag' }
+#            - { entity: 'MotCle', label: 'Mots clés', icon: 'tag' }
+            - { label: 'Utilisateurs' }
+            - { entity: 'User', label: 'Utilisateurs', icon: 'user' }
+    formats:
+        # Ici on définit le format des dates
+        datetime: 'd/m/Y à H:i'
+
+    entities:
+        Article:
+            # Correspond au fichier Article.php
+            class: App\Entity\Article
+
+            # On définit ci-dessous le contenu de la liste qui affichera les articles et les critères de tri
+            list:
+                fields:
+                    - id
+                    - titre
+                    # Le champ ci-dessous affichera l'image de l'article
+                    - { property: 'image', label: 'Image', type: 'image', base_path: '%app.path.featured_images%' }
+                    - { property: 'created_at', label: 'Créé' }
+                    # Les catégories et les mots-clé sont listés ci-dessous
+                    - { property: 'categorie', label: 'Catégories', type: 'array'}
+                    - { property: 'motCle', label: 'Mots-Clés', type: 'array'}
+                sort: ['created_at', 'desc']
+            # On définit ci-dessous le contenu du formulaire d'ajout ou modification d'article
+            form:
+                fields:
+                    - titre
+                    # Affichage de l'éditeur Wysiwyg
+                    - { property: 'contenu', type: 'fos_ckeditor', type_options: { config_name: 'main_config' }}
+                    # Affichage du champ d'ajout d'image
+                    - { property: 'imageFile', type: 'vich_image', label: 'Image' }
+                    - user
+                    # Les catégories et mots-clés peuvent s'afficher avec une sélection multiple
+                    - { property: 'categorie', label: 'Catégories', type: 'entity', type_options: { class: 'App\Entity\Categorie', multiple: true,by_reference: false, attr: { data-widget: 'select2' }}}
+                    - { property: 'motCle', label: 'Mots Clés', type: 'entity', type_options: { class: 'App\Entity\MotCle', multiple: true,by_reference: false, attr: { data-widget: 'select2' }}}
+        User:
+            class: App\Entity\User
+            label: 'Utilisateurs'
+            list:
+                fields:
+                    - id
+                    - email
+                    - { property: 'roles', label: 'Rôles', type: json_array}
+            form:
+                fields:
+                    - email
+                    - { property: 'roles', label: 'Rôles', type: choice, type_options: {expanded: true, multiple: true, choices: {'Utilisateur':'ROLE_USER', 'Administrateur':'ROLE_ADMIN'}}}

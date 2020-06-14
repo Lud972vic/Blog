@@ -53,6 +53,12 @@ class User implements UserInterface
         $this->articles = new ArrayCollection();
     }
 
+    public function __toString(): ?string
+    {
+        return $this->email;
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -77,7 +83,7 @@ class User implements UserInterface
      */
     public function getUsername(): string
     {
-        return (string) $this->email;
+        return (string)$this->email;
     }
 
     /**
@@ -104,7 +110,7 @@ class User implements UserInterface
      */
     public function getPassword(): string
     {
-        return (string) $this->password;
+        return (string)$this->password;
     }
 
     public function setPassword(string $password): self

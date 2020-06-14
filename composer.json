@@ -5,7 +5,11 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "easycorp/easyadmin-bundle": "^2.3",
+        "friendsofsymfony/ckeditor-bundle": "^2.2",
+        "knplabs/knp-paginator-bundle": "^5.2",
         "sensio/framework-extra-bundle": "^5.1",
+        "stof/doctrine-extensions-bundle": "^1.4",
         "symfony/asset": "5.1.*",
         "symfony/console": "5.1.*",
         "symfony/dotenv": "5.1.*",
@@ -29,7 +33,8 @@
         "symfony/validator": "5.1.*",
         "symfony/web-link": "5.1.*",
         "symfony/yaml": "5.1.*",
-        "symfonycasts/verify-email-bundle": "^1.0"
+        "symfonycasts/verify-email-bundle": "^1.0",
+        "vich/uploader-bundle": "^1.14"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

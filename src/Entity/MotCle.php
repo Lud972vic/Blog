@@ -6,6 +6,7 @@ use App\Repository\MotCleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=MotCleRepository::class)
@@ -25,7 +26,8 @@ class MotCle
     private $mot_cle;
 
     /**
-     * @ORM\Column(type="string", length=70)
+     * @Gedmo\Slug(fields={"mot_cle"})
+     * @ORM\Column(length=70, unique=true)
      */
     private $slug;
 
@@ -37,6 +39,11 @@ class MotCle
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+    }
+
+    public function __toString(): ?string
+    {
+        return $this->mot_cle;
     }
 
     public function getId(): ?int
@@ -59,13 +66,6 @@ class MotCle
     public function getSlug(): ?string
     {
         return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
     }
 
     /**

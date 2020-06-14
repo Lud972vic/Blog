@@ -8,7 +8,12 @@
             <div class="row">
                 <h2> {{ article.titre }}</h2>
             </div>
-            <p>{{ article.contenu }}</p>
+            <p>{{ article.contenu | raw }}</p>
         {% endfor %}
+
+        <hr>
+        <div class="navigation">
+            {{ knp_pagination_render(articles) }}
+        </div>
     </div>
 {% endblock %}
