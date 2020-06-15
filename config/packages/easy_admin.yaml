@@ -14,8 +14,9 @@ easy_admin:
         menu:
             - { label: 'Articles' }
             - { entity: 'Article', label: 'Articles', icon: 'book' }
-#            - { entity: 'Categorie', label: 'Catégories', icon: 'tag' }
-#            - { entity: 'MotCle', label: 'Mots clés', icon: 'tag' }
+            - { entity: 'Categorie', label: 'Catégories', icon: 'tag' }
+            - { entity: 'MotCle', label: 'Mots Clés', icon: 'tag' }
+
             - { label: 'Utilisateurs' }
             - { entity: 'User', label: 'Utilisateurs', icon: 'user' }
     formats:
@@ -26,7 +27,6 @@ easy_admin:
         Article:
             # Correspond au fichier Article.php
             class: App\Entity\Article
-
             # On définit ci-dessous le contenu de la liste qui affichera les articles et les critères de tri
             list:
                 fields:
@@ -51,6 +51,7 @@ easy_admin:
                     # Les catégories et mots-clés peuvent s'afficher avec une sélection multiple
                     - { property: 'categorie', label: 'Catégories', type: 'entity', type_options: { class: 'App\Entity\Categorie', multiple: true,by_reference: false, attr: { data-widget: 'select2' }}}
                     - { property: 'motCle', label: 'Mots Clés', type: 'entity', type_options: { class: 'App\Entity\MotCle', multiple: true,by_reference: false, attr: { data-widget: 'select2' }}}
+
         User:
             class: App\Entity\User
             label: 'Utilisateurs'
@@ -63,3 +64,25 @@ easy_admin:
                 fields:
                     - email
                     - { property: 'roles', label: 'Rôles', type: choice, type_options: {expanded: true, multiple: true, choices: {'Utilisateur':'ROLE_USER', 'Administrateur':'ROLE_ADMIN'}}}
+
+        Categorie:
+            class: App\Entity\Categorie
+            label: 'Categories'
+            list:
+                fields:
+                    - id
+                    - nom
+            form:
+                fields:
+                    - nom
+
+        MotCle:
+            class: App\Entity\MotCle
+            label: 'Mots-Clès'
+            list:
+                fields:
+                    - id
+                    - mot_cle
+            form:
+                fields:
+                    - mot_cle

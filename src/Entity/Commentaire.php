@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CommentaireRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=CommentaireRepository::class)
@@ -43,6 +44,8 @@ class Commentaire
     private $rgpd = false;
 
     /**
+     * @var \DateTime $created_at
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
     private $created_at;
