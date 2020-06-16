@@ -3,32 +3,42 @@
 {% block title %} article.titre {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>Article : {{ article.titre }}</h1>
-        <p>Publié le {{ article.createdAt | date('d/m/Y à h\\hi') }}</p>
-        <p>En catégorie :</p>
-        <ul>
-            {% for categorie in article.categorie %}
-                <li>{{ categorie.nom }}</li>
-            {% endfor %}
-        </ul>
-
-        <p>Contenu :</p>
-        <div>
-            <p> {{ article.contenu | raw }}</p>
-
-            <hr>
-            <h5> Les commentaires </h5>
-
-            {% for commentaire in article.commentaire %}
-                <p>Publié par {{ commentaire.pseudo }} le {{ commentaire.createdAt|date('d/m/Y à h\\hi') }}</p>
-                <p>{{ commentaire.contenu }}</p>
-            {% else %}
-                <p>Il n'y a aucun commentaire pour l'instant !</p>
-            {% endfor %}
+    <div class="shadow p-3 mb-5 bg-white rounded container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">{{ article.titre }}</h1>
+            <img class="image_article" src="{{ asset('uploads/images/featured/' ~ article.image) }}" class="mr-3"
+                 alt="">
+            <p>Publié le {{ article.createdAt | date('d/m/Y à h\\hi') }}</p>
+            <br>
+            <p class="lead">{{ article.contenu | raw }}</p>
+            <hr class="my-4">
+            <p>Catégories</p>
+            <ul>
+                {% for categorie in article.categorie %}
+                    <li>{{ categorie.nom }}</li>
+                {% endfor %}
+            </ul>
         </div>
-        <hr>
-        <div>
+
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h1 class="display-4">Les commentaires</h1>
+            <ul class="lead">
+                {% for commentaire in article.commentaire %}
+                    <li>{{ commentaire.contenu }}</li>
+
+                    <small>
+                        <il>Publié par {{ commentaire.pseudo }}
+                            le {{ commentaire.createdAt|date('d/m/Y à h\\hi') }}</il>
+                    </small>
+                    <br>
+                    <br>
+                {% else %}
+                    <il>Il n'y a aucun commentaire pour l'instant !</il>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="shadow p-3 mb-5 bg-white rounded">
             <h5>Ajouter un commentaire</h5>
             {{ form(commentaireForm) }}
         </div>

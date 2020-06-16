@@ -34,8 +34,20 @@ class ArticleController extends AbstractController
             $donnees,
             $request->query->getInt('page', 1), 3
         );
+
+        //Savoir si un utilisateur est connecté et récupèrer ses informations pour un message
+        $user_connectee = null;
+
+        if ($this->isGranted('ROLE_USER') == true) {
+            $user_connectee = explode('@', $this->getUser()->getUsername());
+            $user_connectee = 'Bonjour ' . $user_connectee[0] . ', devenez rédacteur d\'article sur notre blog.';
+        } else {
+            $user_connectee = 'Bonjour, inscrivez-vous et devenez rédacteur d\'article sur notre blog.';
+        }
+
         return $this->render('article/index.html.twig', [
             'articles' => $articles,
+            'user_connectee' => $user_connectee
         ]);
     }
 

@@ -1,0 +1,15 @@
+p {
+    color: grey;
+}
+
+a {
+    color: black;
+}
+
+.image_article {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px; /* Rounded border */
+    padding: 5px; /* Some padding */
+    height: 250px; /* Set a small width */
+    margin-bottom: 10px;
+}

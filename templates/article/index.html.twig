@@ -3,22 +3,29 @@
 {% block title %}La liste des articles{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="container mt-5">
+        <h1 class="mb-5">Liste des articles</h1>
 
-        {% for message in app.flashes ('message_publie') %}
-            <div class="alert alert-light" role="alert">
-                {#Le message du message_publie#}
-                {{ message }}
-            </div>
-        {% endfor %}
-        <h1>Liste des articles</h1>
+        <div class="row">
+            {% for  article in articles %}
+                <div class="col-md-5 offset-1">
+                    <div class="media">
+                        <div class="media-body">
+                            <h5 class="mt-0">{{ article.titre }}</h5>
+                            <img class="image_article" src="{{ asset('uploads/images/featured/' ~ article.image) }}"
+                                 class="mr-3"
+                                 alt="">
+                            <p>{{ article.contenu | raw }}</p>
+                            <a class="btn btn-outline-dark btn-sm mb-5"
+                               href="{{ path('actualites_article', {'slug': article.slug}) }}" role="button">Lire
+                                l'article</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
 
-        {% for  article in articles %}
-            <h2><a href="{{ path('actualites_article', {'slug': article.slug}) }}">{{ article.titre }}</a></h2>
-            <p>{{ article.contenu | raw }}</p>
-        {% endfor %}
-
-        <hr>
+        <p class="m-5"> {{ user_connectee }} </p>
         <div class="navigation">
             {{ knp_pagination_render(articles) }}
         </div>
