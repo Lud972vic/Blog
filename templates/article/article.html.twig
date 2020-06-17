@@ -1,27 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} article.titre {% endblock %}
+{% block title %} Article/{{ article.titre }} {% endblock %}
 
 {% block body %}
     <div class="shadow p-3 mb-5 bg-white rounded container mt-5">
-        <div class="jumbotron">
-            <h1 class="display-4">{{ article.titre }}</h1>
+        <div class="jumbotron text-center">
+            <h1 class="display-4 mb-5">{{ article.titre }}</h1>
             <img class="image_article" src="{{ asset('uploads/images/featured/' ~ article.image) }}" class="mr-3"
                  alt="">
-            <p>Publié le {{ article.createdAt | date('d/m/Y à h\\hi') }}</p>
+            <small><p>Publié le {{ article.createdAt | date('d/m/Y à H\\Hi') }}</p></small>
             <br>
             <p class="lead">{{ article.contenu | raw }}</p>
+
             <hr class="my-4">
-            <p>Catégories</p>
-            <ul>
-                {% for categorie in article.categorie %}
-                    <li>{{ categorie.nom }}</li>
-                {% endfor %}
-            </ul>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>Catégories</p>
+                        <ul>
+                            {% for categorie in article.categorie %}
+                                <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip"
+                                        data-placement="top" title="Tooltip on top">
+                                    {{ categorie.nom }}
+                                </button>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p>Mots-clès</p>
+                        <ul>
+                            {% for motcle in article.motCle %}
+                                <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip"
+                                        data-placement="top" title="Tooltip on top">
+                                    {{ motcle.motcle }}
+                                </button>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="shadow p-3 mb-5 bg-white rounded">
-            <h1 class="display-4">Les commentaires</h1>
+            <div class="text-center mb-5">
+                <h1 class="display-4">Les commentaires</h1>
+                <small>
+                    <p>
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        {{ article.commentaire | length }} commentaires
+                    </p>
+                </small>
+
+            </div>
+
             <ul class="lead">
                 {% for commentaire in article.commentaire %}
                     <li>{{ commentaire.contenu }}</li>
@@ -39,7 +71,7 @@
         </div>
 
         <div class="shadow p-3 mb-5 bg-white rounded">
-            <h5>Ajouter un commentaire</h5>
+            <h5 class="display-4 text-center mb-5">Ajouter un commentaire</h5>
             {{ form(commentaireForm) }}
         </div>
     </div>

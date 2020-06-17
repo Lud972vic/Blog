@@ -15,6 +15,12 @@
                             <img class="image_article" src="{{ asset('uploads/images/featured/' ~ article.image) }}"
                                  class="mr-3"
                                  alt="">
+                            <small>
+                                <p>Publié le {{ article.createdAt | date('d/m/Y à H\\Hi') }}
+                                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                    {{ article.commentaire | length }} commentaires
+                                </p>
+                            </small>
                             <p>{{ article.contenu | raw }}</p>
                             <a class="btn btn-outline-dark btn-sm mb-5"
                                href="{{ path('actualites_article', {'slug': article.slug}) }}" role="button">Lire

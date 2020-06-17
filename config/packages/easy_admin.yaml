@@ -1,6 +1,6 @@
 easy_admin:
     # On définit le nom de l'interface d'administration
-    site_name: 'Gestion de mon blog'
+    site_name: 'Administration du Blog'
     # On définit l'affichage de l'utilisateur
     user:
         display_name: true

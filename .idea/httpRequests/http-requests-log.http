@@ -1,0 +1,436 @@
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "Contenu ajouté API",
+"image": "test.jpg"}
+
+<> 2020-06-17T045035.400.txt
+
+###
+
+GET http://127.0.0.1:8000/api/article/lire/14
+
+<> 2020-06-17T045027.200.json
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "Contenu ajouté API",
+"image": "test.jpg"}
+
+<> 2020-06-17T045006.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "Contenu ajouté API",
+"image": "test.jpg"}
+
+<> 2020-06-17T044940.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "Contenu ajouté API",
+"image": "test.jpg"}
+
+<> 2020-06-17T025646.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "Contenu ajouté API",
+"image": "test.jpg"}
+
+<> 2020-06-17T025639.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "Contenu ajouté API",
+"image": "test.jpg"}
+
+<> 2020-06-17T023955.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "<p>Contenu ajouté API</p>",
+"image": "test.jpg"}
+
+<> 2020-06-17T023936.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "<p>Contenu ajouté API</p>",
+"image": "test.jpg"}
+
+<> 2020-06-17T023836.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "<p>Contenu ajouté API</p>",
+"image": "test.jpg"}
+
+<> 2020-06-17T023833.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "<p>Contenu ajouté API</p>",
+"image": "test.jpg"}
+
+<> 2020-06-17T023753.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{"titre": "Ajout API",
+"contenu": "<p>Contenu ajouté API</p>",
+"image": "test.jpg"}
+
+<> 2020-06-17T023443.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout/gggg
+{}:
+
+<> 2020-06-17T023432.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout/
+{}:
+
+<> 2020-06-17T023426.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{}:
+
+<> 2020-06-17T023416.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{}:
+
+<> 2020-06-17T023410.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{}:
+
+<> 2020-06-17T023345.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+
+}
+
+<> 2020-06-17T023335.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout API"
+}:
+
+<> 2020-06-17T023308.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout API",
+    "contenu": "<p>Contenu ajouté API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T023148.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout API",
+    "contenu": "<p>Contenu ajouté API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T023142.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T023114.400.txt
+
+###
+
+GET http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T023050.405.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T023037.404.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T022856.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T022739.400.txt
+
+###
+
+GET http://127.0.0.1:8000/api/article/lire/14
+
+<> 2020-06-17T022735.200.json
+
+###
+
+GET http://127.0.0.1:8000/api/articles/liste
+
+<> 2020-06-17T022729.200.json
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T022725.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T022710.500.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+{
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}
+
+<> 2020-06-17T022615.500.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T022435.500.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012718.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012709.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012552.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012545.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012444.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012341.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012223.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre": "Ajout par l'API",
+    "contenu": "<p>Contenu ajouté par l'API</p>",
+    "image": "test.jpg"
+}:
+
+<> 2020-06-17T012145.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "titre" : "Ajout par l'API",
+    "contenu" : "<p>Contenu ajouté par l'API</p>",
+    "image" : "test.jpg",
+}:
+
+<> 2020-06-17T012115.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+{:
+    "tire" : "Ajout par l'API",
+    "contenu" : "<p>Contenu ajouté par l'API</p>",
+    "image" : "test.jpg",
+}:
+
+<> 2020-06-17T012100.400.txt
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+{
+    "tire" : "Ajout par l'API",
+    "contenu" : "<p>Contenu ajouté par l'API</p>",
+    "image" : "test.jpg",
+}
+
+<> 2020-06-17T012033.500.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T011849.500.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T011251.404.html
+
+###
+
+POST http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T011218.404.html
+
+###
+
+GET http://127.0.0.1:8000/api/article/ajout
+
+<> 2020-06-17T011135.405.html
+
+###
+
+GET http://127.0.0.1:8000/api/article/lire/14
+
+<> 2020-06-17T124352.200.json
+
+###
+
+GET http://127.0.0.1:8000/api/article/lire/147444
+
+<> 2020-06-17T124335.200.json
+
+###
+
+GET http://127.0.0.1:8000/api/article/lire/145
+
+<> 2020-06-17T124321.200.json
+
+###
+

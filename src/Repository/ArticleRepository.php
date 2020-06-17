@@ -19,6 +19,35 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
+    /**
+     * Retourne une liste d'article pour l'API
+     * @return array
+     */
+    public function apiFindAll(): array
+    {
+        $queryBuilder = $this->createQueryBuilder('article')
+            ->select('article.id', 'article.titre', 'article.contenu', 'article.image', 'article.created_at')
+            ->orderBy('article.created_at', 'DESC');
+
+        $query = $queryBuilder->getQuery();
+        return $query->execute();
+    }
+
+    /**
+     * Retourne un article pour l'API
+     * @param $id
+     * @return array
+     */
+    public function apiFindOneBy($id): array
+    {
+        $queryBuilder = $this->createQueryBuilder('article')
+            ->select('article.id', 'article.titre', 'article.contenu', 'article.image', 'article.created_at')
+            ->where('article.id = ' . $id);
+
+        $query = $queryBuilder->getQuery();
+        return $query->execute();
+    }
+
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */

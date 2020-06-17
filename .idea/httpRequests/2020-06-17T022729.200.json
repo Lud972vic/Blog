@@ -1,0 +1,86 @@
+[
+  {
+    "id": 39,
+    "titre": "Nouvel article",
+    "contenu": "<pre>\r\n<strong>Lorem ipsum<\/strong> dolor sit amet, consectetur adipisicing elit. Accusantium aliquam aut nam nihil provident quibusdam unde. Blanditiis corporis, delectus dignissimos fuga inventore ipsa laborum magni minus non sint tempora vero?<\/pre>",
+    "image": "5ee89081243e9665880006.jpg",
+    "created_at": {
+      "timezone": {
+        "name": "UTC",
+        "transitions": [
+          {
+            "ts": -9223372036854775808,
+            "time": "-292277022657-01-27T08:29:52+0000",
+            "offset": 0,
+            "isdst": false,
+            "abbr": "UTC"
+          }
+        ],
+        "location": {
+          "country_code": "??",
+          "latitude": 0,
+          "longitude": 0,
+          "comments": ""
+        }
+      },
+      "offset": 0,
+      "timestamp": 1592299649
+    }
+  },
+  {
+    "id": 14,
+    "titre": "Portrait",
+    "contenu": "<p>J&#39;aime la photographie...<\/p>",
+    "image": "5ee7ae119ff0e758107890.jpg",
+    "created_at": {
+      "timezone": {
+        "name": "UTC",
+        "transitions": [
+          {
+            "ts": -9223372036854775808,
+            "time": "-292277022657-01-27T08:29:52+0000",
+            "offset": 0,
+            "isdst": false,
+            "abbr": "UTC"
+          }
+        ],
+        "location": {
+          "country_code": "??",
+          "latitude": 0,
+          "longitude": 0,
+          "comments": ""
+        }
+      },
+      "offset": 0,
+      "timestamp": 1592241681
+    }
+  },
+  {
+    "id": 13,
+    "titre": "Les langages du Web",
+    "contenu": "<p>C&#39;est cool <span style=\"color:#ffffff\"><strong><span style=\"background-color:#e74c3c\">Symfony<\/span><\/strong><\/span>...<\/p>",
+    "image": "5ee7addc214c9599424862.jpg",
+    "created_at": {
+      "timezone": {
+        "name": "UTC",
+        "transitions": [
+          {
+            "ts": -9223372036854775808,
+            "time": "-292277022657-01-27T08:29:52+0000",
+            "offset": 0,
+            "isdst": false,
+            "abbr": "UTC"
+          }
+        ],
+        "location": {
+          "country_code": "??",
+          "latitude": 0,
+          "longitude": 0,
+          "comments": ""
+        }
+      },
+      "offset": 0,
+      "timestamp": 1592241628
+    }
+  }
+]

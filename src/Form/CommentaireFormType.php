@@ -37,7 +37,7 @@ class CommentaireFormType extends AbstractType
             ])
             ->add('Envoyer', SubmitType::class,
                 ['attr' =>
-                    ['class' => 'btn btn-outline-primary mt-2']
+                    ['class' => 'btn btn-outline-dark btn-sm btn-block mt-2']
                 ]);
     }
 

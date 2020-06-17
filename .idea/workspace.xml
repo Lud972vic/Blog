@@ -150,10 +150,331 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon_jur\www\jur\tests" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon_jur\www\jur\src" />
       <recent name="D:\laragon_jur\www\jur\public" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{&quot;titre&quot;" />
+                <option name="value" value="&quot;Ajout API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;contenu&quot;" />
+                <option name="value" value="&quot;Contenu ajouté API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;image&quot;" />
+                <option name="value" value="&quot;test.jpg&quot;}" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/lire/14" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{&quot;titre&quot;" />
+                <option name="value" value="&quot;Ajout API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;contenu&quot;" />
+                <option name="value" value="&quot;&lt;p&gt;Contenu ajouté API&lt;/p&gt;&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;image&quot;" />
+                <option name="value" value="&quot;test.jpg&quot;}" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout/gggg" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout/" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;titre&quot;" />
+                <option name="value" value="&quot;Ajout API&quot;" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;titre&quot;" />
+                <option name="value" value="&quot;Ajout API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;contenu&quot;" />
+                <option name="value" value="&quot;&lt;p&gt;Contenu ajouté API&lt;/p&gt;&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;image&quot;" />
+                <option name="value" value="&quot;test.jpg&quot;" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;titre&quot;" />
+                <option name="value" value="&quot;Ajout par l'API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;contenu&quot;" />
+                <option name="value" value="&quot;&lt;p&gt;Contenu ajouté par l'API&lt;/p&gt;&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;image&quot;" />
+                <option name="value" value="&quot;test.jpg&quot;" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/articles/liste" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;    &quot;titre&quot;: &quot;Ajout par l'API&quot;,&#10;    &quot;contenu&quot;: &quot;&lt;p&gt;Contenu ajouté par l'API&lt;/p&gt;&quot;,&#10;    &quot;image&quot;: &quot;test.jpg&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;titre&quot; " />
+                <option name="value" value="&quot;Ajout par l'API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;contenu&quot; " />
+                <option name="value" value="&quot;&lt;p&gt;Contenu ajouté par l'API&lt;/p&gt;&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;image&quot; " />
+                <option name="value" value="&quot;test.jpg&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;tire&quot; " />
+                <option name="value" value="&quot;Ajout par l'API&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;contenu&quot; " />
+                <option name="value" value="&quot;&lt;p&gt;Contenu ajouté par l'API&lt;/p&gt;&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;image&quot; " />
+                <option name="value" value="&quot;test.jpg&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/ajout" />
+          <option name="urlPath" value="" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;    &quot;tire&quot; : &quot;Ajout par l'API&quot;,&#10;    &quot;contenu&quot; : &quot;&lt;p&gt;Contenu ajouté par l'API&lt;/p&gt;&quot;,&#10;    &quot;image&quot; : &quot;test.jpg&quot;,&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/lire/147444" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://127.0.0.1:8000/api/article/lire/145" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -166,6 +487,28 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.testAPI#3">
+    <configuration name="testAPI#1 (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/testAPI.rest">
+      <method v="2" />
+    </configuration>
+    <configuration name="testAPI#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/public/testAPI.rest">
+      <method v="2" />
+    </configuration>
+    <configuration name="testAPI#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/testAPI.rest" index="2">
+      <method v="2" />
+    </configuration>
+    <configuration name="testAPI#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/tests/testAPI.rest" index="3">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.testAPI#3" />
+        <item itemvalue="HTTP Request.testAPI#2" />
+        <item itemvalue="HTTP Request.testAPI#1 (1)" />
+        <item itemvalue="HTTP Request.testAPI#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,6 +528,12 @@
       <workItem from="1592299148452" duration="11709000" />
       <workItem from="1592324949038" duration="7855000" />
       <workItem from="1592335410846" duration="3994000" />
+      <workItem from="1592340789640" duration="7794000" />
+      <workItem from="1592377121392" duration="2148000" />
+      <workItem from="1592379545577" duration="23094000" />
+      <workItem from="1592404051075" duration="1465000" />
+      <workItem from="1592413261884" duration="323000" />
+      <workItem from="1592418263084" duration="2950000" />
     </task>
     <servers />
   </component>
