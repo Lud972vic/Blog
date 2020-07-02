@@ -6,18 +6,20 @@
     <div class="shadow p-3 mb-5 bg-white rounded container mt-5">
         <div class="jumbotron text-center">
             <h1 class="display-4 mb-5">{{ article.titre }}</h1>
-            <img class="image_article" src="{{ asset('uploads/images/featured/' ~ article.image) }}" class="mr-3"
-                 alt="">
-            <small><p>Publié le {{ article.createdAt | date('d/m/Y à H\\Hi') }}</p></small>
+            <img src="{{ vich_uploader_asset(article, 'imageFile') | imagine_filter('gd_big') }}"
+                 class="mr-3 img-fluid"
+                 alt="{{ article.titre }}">
+            <small><p>Published on {{ article.createdAt | date('d/m/Y à H\\Hi') }}</p></small>
             <br>
-            <p class="lead">{{ article.contenu | raw }}</p>
-
+            <p class="lead">
+                {{ article.contenu | raw }}
+            </p>
             <hr class="my-4">
 
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <p>Catégories</p>
+                        <p>Categories</p>
                         <ul>
                             {% for categorie in article.categorie %}
                                 <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip"
@@ -28,7 +30,7 @@
                         </ul>
                     </div>
                     <div class="col">
-                        <p>Mots-clès</p>
+                        <p>Keywords</p>
                         <ul>
                             {% for motcle in article.motCle %}
                                 <button type="button" class="btn btn-light btn-sm" data-toggle="tooltip"
@@ -44,11 +46,11 @@
 
         <div class="shadow p-3 mb-5 bg-white rounded">
             <div class="text-center mb-5">
-                <h1 class="display-4">Les commentaires</h1>
+                <h1 class="display-4">Comments</h1>
                 <small>
                     <p>
                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        {{ article.commentaire | length }} commentaires
+                        {{ article.commentaire | length }} comments
                     </p>
                 </small>
 
@@ -59,20 +61,31 @@
                     <li>{{ commentaire.contenu }}</li>
 
                     <small>
-                        <il>Publié par {{ commentaire.pseudo }}
+                        <il>Published by {{ commentaire.pseudo }}
                             le {{ commentaire.createdAt|date('d/m/Y à h\\hi') }}</il>
                     </small>
                     <br>
                     <br>
                 {% else %}
-                    <il>Il n'y a aucun commentaire pour l'instant !</il>
+                    <il>There are no comment yet !</il>
                 {% endfor %}
             </ul>
         </div>
 
         <div class="shadow p-3 mb-5 bg-white rounded">
-            <h5 class="display-4 text-center mb-5">Ajouter un commentaire</h5>
+            <h5 class="display-4 text-center mb-5">Add a comment</h5>
             {{ form(commentaireForm) }}
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+                /*                $("pre").each(function () {
+                                    $(this).replaceWith('<p>' + $(this).text() + '</p>');
+                                });*/
+            }
+        )
+    </script>
 {% endblock %}

@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CommentaireFormType extends AbstractType
+class CommentFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -31,11 +31,11 @@ class CommentaireFormType extends AbstractType
                 ]
             )
             ->add('rgpd', CheckboxType::class, [
-                'label' => 'J\'accepte la collecte de mes données...',
+                'label' => 'I agree to the collection of my data...',
                 'attr' =>
                     ['class' => 'form-control mb-2']
             ])
-            ->add('Envoyer', SubmitType::class,
+            ->add('Send', SubmitType::class,
                 ['attr' =>
                     ['class' => 'btn btn-outline-dark btn-sm btn-block mt-2']
                 ]);

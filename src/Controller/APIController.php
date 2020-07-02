@@ -22,18 +22,18 @@ class APIController extends AbstractController
 {
     /**
      * Récupération des articles
-     * @Route("/articles/liste", name="articles_liste", methods={"GET"})
+     * @Route("/articles-list", name="articles_list", methods={"GET"})
      */
-    public function getLesArticles(ArticleRepository $repository)
+    public function getArticlesList(ArticleRepository $repository)
     {
         return MesFonctions::apiGet($repository, 'apiFindAll', '');
     }
 
     /**
      * Récupération d'un article
-     * @Route("/article/lire/{id}", name="article_lire", methods={"GET"})
+     * @Route("/article-read/{id}", name="article_read", methods={"GET"})
      */
-    public function getUnArticle(ArticleRepository $repository, Request $request)
+    public function getArticleRead(ArticleRepository $repository, Request $request)
     {
         $id = $request->attributes->get('id');
         return MesFonctions::apiGet($repository, 'apiFindOneBy', $id);
@@ -41,9 +41,9 @@ class APIController extends AbstractController
 
     /**
      * Ajout d'un article
-     * @Route("/article/ajout", name="article_ajout", methods={"POST"})
+     * @Route("/article-add", name="article_add", methods={"POST"})
      */
-    public function apiAddArticle(Request $request)
+    public function apiArticleAdd(Request $request)
         //***Avec JavaScript
     {
         //On vérifie si on a une reqûete XMLHttpRequest
@@ -68,17 +68,17 @@ class APIController extends AbstractController
         $em->flush();
 
         //On retourne la confirmation
-        return new Response('L\'article est crée.', 201);
+        return new Response('The article is created.', 201);
         //***}
         //***return new Response('L\'article n\'est pas crée.', 404);
     }
 
     /**
      * Modifier un article
-     * @Route("/article/editer/{id}",name="article_editer", methods={"PUT"})
+     * @Route("/article-edit/{id}",name="article_edit", methods={"PUT"})
      * ?Article $article si on ne trouve pas l'article, on le crée d'où le '?'
      */
-    public function apiEditArticle(?Article $article, Request $request)
+    public function apiArticleEdit(?Article $article, Request $request)
     {
         //On vérifie si on a une reqûete XMLHttpRequest
         //***if ($request->isXmlHttpRequest()) {
@@ -110,7 +110,7 @@ class APIController extends AbstractController
         $em->flush();
 
         //On retourne la confirmation
-        return new Response('L\'article est crée/modifié.', $codeResponse);
+        return new Response('The article is created/edited.', $codeResponse);
 
         //***}
         //***return new Response('L\'article n\'est pas crée.', 404);
@@ -118,16 +118,16 @@ class APIController extends AbstractController
 
     /**
      * Supprimer un article
-     * @Route("/article/supprimer/{id}", name="article_supprimer", methods={"DELETE"})
+     * @Route("/article-remove/{id}", name="article_remove", methods={"DELETE"})
      * @param Article $article
      * @return Response
      */
-    public function apiRemoveArticle(Article $article)
+    public function apiArticleRemove(Article $article)
     {
         $em = $this->getDoctrine()->getManager();
         $em->remove($article);
         $em->flush();
 
-        return new Response('L\'article est Supprimé', 200);
+        return new Response('The article is deleted', 200);
     }
 }

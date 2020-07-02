@@ -69,7 +69,6 @@ class Commentaire
     public function setContenu(string $contenu): self
     {
         $this->contenu = $contenu;
-
         return $this;
     }
 
@@ -81,7 +80,6 @@ class Commentaire
     public function setActif(bool $actif): self
     {
         $this->actif = $actif;
-
         return $this;
     }
 
@@ -93,7 +91,6 @@ class Commentaire
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
         return $this;
     }
 
@@ -105,7 +102,6 @@ class Commentaire
     public function setPseudo(string $pseudo): self
     {
         $this->pseudo = $pseudo;
-
         return $this;
     }
 
@@ -117,7 +113,6 @@ class Commentaire
     public function setRgpd(bool $rgpd): self
     {
         $this->rgpd = $rgpd;
-
         return $this;
     }
 
@@ -129,7 +124,6 @@ class Commentaire
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
         $this->created_at = $created_at;
-
         return $this;
     }
 

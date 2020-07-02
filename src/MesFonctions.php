@@ -33,9 +33,9 @@ class MesFonctions
 
         if (file_exists($leMedia)) {
             unlink($leMedia);
-            echo "Le média est supprimé.";
+            echo "The media is deleted.";
         } else {
-            echo "Le média n'hésite pas.";
+            echo "The media does not exist.";
         }
     }
 

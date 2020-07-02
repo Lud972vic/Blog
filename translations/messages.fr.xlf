@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="6sz9l7G" resname="title.post_list">
+                <source>title.post_list</source>
+                <target>Liste des articles</target>
+            </trans-unit>
+            <trans-unit id="g9VoXTb" resname="Your article has been published !">
+                <source>Your article has been published !</source>
+                <target>Votre article a été publié !</target>
+            </trans-unit>
+            <trans-unit id="ARjBTvy" resname="List of articles">
+                <source>List of articles</source>
+                <target>Liste d'articles</target>
+            </trans-unit>
+            <trans-unit id="ScJmuqq" resname="Search">
+                <source>Search</source>
+                <target>Rechercher</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+
+<!--php bin/console translation:update &#45;&#45;force fr-->

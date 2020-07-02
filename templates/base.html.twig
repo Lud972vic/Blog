@@ -10,15 +10,14 @@
     <link href="{{ asset('CSS/styles.css') }}" rel="stylesheet">
 </head>
 <body>
-{% include("partials/navbar.html.twig") %}
+{% include("partials/partialsNavBar.html.twig") %}
 {% block body %}{% endblock %}
 
+{% block javascripts %}{% endblock %}
 <!-- Bootstrap JS -->
 <script src="{{ asset('JS/jquery-3.5.1.slim.min.js') }}"></script>
 <script src="{{ asset('JS/popper.min.js') }}"></script>
 <script src="{{ asset('JS/bootstrap.min.js') }}"></script>
-
-{% block javascripts %}{% endblock %}
 <script src="{{ asset('JS/script.js') }}"></script>
 </body>
 </html>

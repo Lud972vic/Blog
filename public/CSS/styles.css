@@ -8,8 +8,20 @@ a {
 
 .image_article {
     border: 1px solid #ddd; /* Gray border */
-    border-radius: 4px; /* Rounded border */
-    padding: 5px; /* Some padding */
-    height: 250px; /* Set a small width */
+    border-radius: 4px;
+    padding: 5px;
+    width: 50%;
+    height: auto;
     margin-bottom: 10px;
+}
+
+.image_article_mini {
+    padding: 5px; /* Some padding */
+    width: 100%;
+    height: auto;
+}
+
+pre {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

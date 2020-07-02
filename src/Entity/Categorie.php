@@ -59,7 +59,6 @@ class Categorie
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
-
         return $this;
     }
 
@@ -82,7 +81,6 @@ class Categorie
             $this->articles[] = $article;
             $article->addCategorie($this);
         }
-
         return $this;
     }
 
@@ -92,7 +90,6 @@ class Categorie
             $this->articles->removeElement($article);
             $article->removeCategorie($this);
         }
-
         return $this;
     }
 }

@@ -140,22 +140,29 @@
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
+      <path value="$PROJECT_DIR$/vendor/studio-42/elfinder" />
+      <path value="$PROJECT_DIR$/vendor/helios-ag/fm-elfinder-bundle" />
+      <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dE7AuVGCwQn7t2waeupV81cWdw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon_jur\www\jur\tests" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon_jur\www\jur\templates\admin" />
       <recent name="D:\laragon_jur\www\jur\src" />
       <recent name="D:\laragon_jur\www\jur\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon_jur\www\jur\public\uploads" />
+      <recent name="D:\laragon_jur\www\jur\tests" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -534,6 +541,26 @@
       <workItem from="1592404051075" duration="1465000" />
       <workItem from="1592413261884" duration="323000" />
       <workItem from="1592418263084" duration="2950000" />
+      <workItem from="1592421887642" duration="23000" />
+      <workItem from="1592421926235" duration="8443000" />
+      <workItem from="1592430733571" duration="300000" />
+      <workItem from="1592487916357" duration="4926000" />
+      <workItem from="1592496784085" duration="4176000" />
+      <workItem from="1592502576037" duration="3372000" />
+      <workItem from="1592506557218" duration="928000" />
+      <workItem from="1592604163314" duration="1586000" />
+      <workItem from="1592753846690" duration="14645000" />
+      <workItem from="1592815527671" duration="5309000" />
+      <workItem from="1592831054978" duration="8915000" />
+      <workItem from="1592845555247" duration="6318000" />
+      <workItem from="1592852226218" duration="3177000" />
+      <workItem from="1592855688411" duration="8013000" />
+      <workItem from="1592865103073" duration="326000" />
+      <workItem from="1593278344919" duration="3397000" />
+      <workItem from="1593351472259" duration="948000" />
+      <workItem from="1593355104727" duration="6051000" />
+      <workItem from="1593366833479" duration="1022000" />
+      <workItem from="1593581297651" duration="221000" />
     </task>
     <servers />
   </component>
@@ -552,5 +579,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/src/Controller/ArticleController.php</url>
+          <line>58</line>
+          <properties>
+            <option name="className" value="\App\Controller\ArticleController" />
+            <option name="methodName" value="articleAdd" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/ArticleController.php</url>
+          <line>76</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

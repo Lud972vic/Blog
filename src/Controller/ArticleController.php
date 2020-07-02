@@ -4,13 +4,14 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Entity\Commentaire;
-use App\Form\AjoutArticleFromType;
-use App\Form\CommentaireFormType;
+use App\Form\ArticleAddFromType;
+use App\Form\CommentFormType;
 use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 //Pour filtrer l'accès à cette route en fonction des droits des utilisateurs
 //use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -18,47 +19,47 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class ArticleController
  * @package App\Controller
- * @Route("/actualites",name="actualites_")
+ * @Route("/news",name="news_")
  */
 class ArticleController extends AbstractController
 {
     /**
-     * @Route("/", name="articles")
+     * @Route("/articles-list", name="articles_list")
      */
-    public function index(Request $request, PaginatorInterface $paginator)
+    public function articlesList(Request $request, PaginatorInterface $paginator)
     {
         //On récupere la liste de tous les articles
-        $donnees = $this->getDoctrine()->getRepository(Article::class)->findBy([], ['created_at' => 'desc']);
-        /*Numéro de la page en cours, 1 par defaut (page 1), 4 nombre d element par page*/
+        $data = $this->getDoctrine()->getRepository(Article::class)->findBy([], ['created_at' => 'desc']);
+        /*Numéro de la page en cours, 1 par defaut (page 1), 6 nombre d element par page*/
         $articles = $paginator->paginate(
-            $donnees,
-            $request->query->getInt('page', 1), 3
+            $data,
+            $request->query->getInt('page', 1), 6
         );
 
         //Savoir si un utilisateur est connecté et récupèrer ses informations pour un message
-        $user_connectee = null;
+        $user = null;
 
         if ($this->isGranted('ROLE_USER') == true) {
-            $user_connectee = explode('@', $this->getUser()->getUsername());
-            $user_connectee = 'Bonjour ' . $user_connectee[0] . ', devenez rédacteur d\'article sur notre blog.';
+            $user = explode('@', $this->getUser()->getUsername());
+            $user = 'Hello ' . $user[0] . ', become an article editor on our blog.';
         } else {
-            $user_connectee = 'Bonjour, inscrivez-vous et devenez rédacteur d\'article sur notre blog.';
+            $user = 'Hello, subscribe and become an article editor on our blog.';
         }
 
-        return $this->render('article/index.html.twig', [
+        return $this->render('article/articlesList.html.twig', [
             'articles' => $articles,
-            'user_connectee' => $user_connectee
+            'user' => $user
         ]);
     }
 
     /**
      * @IsGranted("ROLE_USER")
-     * @Route("/article/nouveau", name="ajout_article")
+     * @Route("/article-add", name="article_add")
      */
-    public function ajoutArticle(Request $request)
+    public function articleAdd(Request $request, TranslatorInterface $translator)
     {
         $articles = new Article();
-        $form = $this->createForm(AjoutArticleFromType::class, $articles);
+        $form = $this->createForm(ArticleAddFromType::class, $articles);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -72,35 +73,37 @@ class ArticleController extends AbstractController
             $doctrine->flush();
 
             //Message flash
-            $this->addFlash('message_publie', 'Votre article a bien été publié !');
+            //'Your article has been published !'
+            $message = $translator->trans('Your article has been published !');
+            $this->addFlash('message', $message);
 
             //Retour à l'accueil
-            return $this->redirectToRoute('actualites_articles');
+            return $this->redirectToRoute('news_articles_list');
         }
 
-        return $this->render('article/ajout_article.html.twig', [
-            'articleForm' => $form->createView()
+        return $this->render('article/articleAdd.html.twig', [
+            'articleAddFromType' => $form->createView()
         ]);
     }
 
     /**
-     * @Route("/article/{slug}", name="article")
+     * @Route("/article-slug/{slug}", name="article_slug")
      */
-    public function article($slug, Request $request)
+    public function articleSlug($slug, Request $request)
     {
         $article = $this->getDoctrine()->getRepository(Article::class)->findOneBy([
             'slug' => $slug
         ]);
 
         if (!$article) {
-            throw $this->createNotFoundException("L'article recherché n'existe pas !");
+            throw $this->createNotFoundException("The requested article does not exist !");
         }
 
         //On instancie l'entité Commentaires
-        $commentaires = new Commentaire();
+        $comments = new Commentaire();
 
         //On crée l'object formulaire
-        $form = $this->createForm(CommentaireFormType::class, $commentaires);
+        $form = $this->createForm(CommentFormType::class, $comments);
 
         //On récupère les données saisies au Submit
         $form->handleRequest($request);
@@ -108,19 +111,19 @@ class ArticleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             //Ici le formulaire a été envoyé et les données sont valides
             //On passe l'object $article pour joindre le commentaire à l'articke
-            $commentaires->setArticle($article);
-            $commentaires->setCreatedAt(new \DateTime('now'));
+            $comments->setArticle($article);
+            $comments->setCreatedAt(new \DateTime('now'));
             //On instancies Doctrine
             $doctrine = $this->getDoctrine()->getManager();
             //On hydrate $commentaire
-            $doctrine->persist($commentaires);
+            $doctrine->persist($comments);
             //On écrit dans la base de données
             $doctrine->flush();
         }
 
-        return $this->render('article/article.html.twig', [
+        return $this->render('article/articleSlug.html.twig', [
             'article' => $article,
-            'commentaires' => $commentaires,
+            'comments' => $comments,
             'commentaireForm' => $form->createView()
         ]);
     }

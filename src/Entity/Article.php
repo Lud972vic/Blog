@@ -107,7 +107,6 @@ class Article
     public function setTitre(string $titre): self
     {
         $this->titre = $titre;
-
         return $this;
     }
 
@@ -124,7 +123,6 @@ class Article
     public function setContenu(string $contenu): self
     {
         $this->contenu = $contenu;
-
         return $this;
     }
 
@@ -146,7 +144,6 @@ class Article
     public function setImage($image)
     {
         $this->image = $image;
-
         return $this;
     }
 
@@ -173,7 +170,6 @@ class Article
     public function setUser(?User $user): self
     {
         $this->user = $user;
-
         return $this;
     }
 
@@ -191,7 +187,6 @@ class Article
             $this->commentaire[] = $commentaire;
             $commentaire->setArticle($this);
         }
-
         return $this;
     }
 
@@ -204,7 +199,6 @@ class Article
                 $commentaire->setArticle(null);
             }
         }
-
         return $this;
     }
 
@@ -221,7 +215,6 @@ class Article
         if (!$this->mot_cle->contains($motCle)) {
             $this->mot_cle[] = $motCle;
         }
-
         return $this;
     }
 
@@ -230,7 +223,6 @@ class Article
         if ($this->mot_cle->contains($motCle)) {
             $this->mot_cle->removeElement($motCle);
         }
-
         return $this;
     }
 
@@ -247,7 +239,6 @@ class Article
         if (!$this->categorie->contains($categorie)) {
             $this->categorie[] = $categorie;
         }
-
         return $this;
     }
 
@@ -256,7 +247,6 @@ class Article
         if ($this->categorie->contains($categorie)) {
             $this->categorie->removeElement($categorie);
         }
-
         return $this;
     }
 }

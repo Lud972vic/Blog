@@ -59,7 +59,6 @@ class MotCle
     public function setMotCle(string $mot_cle): self
     {
         $this->mot_cle = $mot_cle;
-
         return $this;
     }
 
@@ -82,7 +81,6 @@ class MotCle
             $this->articles[] = $article;
             $article->addMotCle($this);
         }
-
         return $this;
     }
 
@@ -92,7 +90,6 @@ class MotCle
             $this->articles->removeElement($article);
             $article->removeMotCle($this);
         }
-
         return $this;
     }
 }

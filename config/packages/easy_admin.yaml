@@ -4,7 +4,7 @@ easy_admin:
     # On définit l'affichage de l'utilisateur
     user:
         display_name: true
-        display_avatar: false
+        display_avatar: true
     design:
         # Ces lignes sont utiles pour CKEditor
         form_theme:
@@ -63,7 +63,7 @@ easy_admin:
             form:
                 fields:
                     - email
-                    - { property: 'roles', label: 'Rôles', type: choice, type_options: {expanded: true, multiple: true, choices: {'Utilisateur':'ROLE_USER', 'Administrateur':'ROLE_ADMIN'}}}
+                    - { property: 'roles', label: 'Rôles', type: choice, type_options: {expanded: true, multiple: true, choices: {'Utilisateur':'ROLE_USER', 'Administrateur':'ROLE_ADMIN', 'Editeur':'ROLE_EDITOR','Modérateur':'ROLE_MODERATOR'}}}
 
         Categorie:
             class: App\Entity\Categorie
